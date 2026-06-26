@@ -6,7 +6,7 @@ category: "data"
 github: "https://github.com/bryancourtneywhite/data-pipeline-cli"
 featured: true
 order: 1
-status: "planned"
+status: "in-progress"
 ---
 
 ## Overview
