@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('projects');
+const projects = allProjects.sort((a, b) => a.data.order - b.data.order);
+
+const categories = [
+  { key: 'all', label: 'All' },
+  { key: 'data', label: 'Data' },
+  { key: 'ml', label: 'ML' },
+  { key: 'agents', label: 'Agents' },
+  { key: 'app', label: 'App Dev' },
+];
+---
+
+<BaseLayout title="Projects" description="All portfolio projects across data pipelines, ML, AI agents, and Python app development.">
+  <div class="max-w-5xl mx-auto px-6 py-16">
+    <h1 class="text-4xl font-bold text-white mb-2">Projects</h1>
+    <p class="text-gray-400 text-lg mb-10">
+      Six projects across the Python data and AI stack — from ETL pipelines to multi-agent systems.
+    </p>
+
+    <!-- Category filter (static labels, no JS needed for a simple version) -->
+    <div class="flex flex-wrap gap-2 mb-10">
+      {categories.map((cat) => (
+        <span class="bg-gray-800 text-gray-400 text-sm px-4 py-2 rounded-full border border-gray-700 cursor-default">
+          {cat.label}
+        </span>
+      ))}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {projects.map((project) => (
+        <ProjectCard
+          title={project.data.title}
+          description={project.data.description}
+          tags={project.data.tags}
+          github={project.data.github}
+          demo={project.data.demo}
+          status={project.data.status}
+          slug={project.slug}
+        />
+      ))}
+    </div>
+  </div>
+</BaseLayout>

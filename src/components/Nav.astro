@@ -1,0 +1,31 @@
+---
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/contact', label: 'Contact' },
+];
+
+const current = Astro.url.pathname;
+---
+
+<nav class="sticky top-0 z-50 border-b border-gray-800" style="background-color: rgba(3, 7, 18, 0.85); backdrop-filter: blur(12px);">
+  <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" class="font-mono font-bold text-emerald-400 text-lg tracking-tight hover:text-emerald-300 transition-colors">
+      bryancwhite.dev
+    </a>
+    <ul class="flex gap-8">
+      {links.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class={`text-sm transition-colors hover:text-emerald-400 ${
+              current === link.href ? 'text-emerald-400' : 'text-gray-400'
+            }`}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>

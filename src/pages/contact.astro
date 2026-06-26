@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact" description="Get in touch with Bryan Courtney White, Python Software Engineer.">
+  <div class="max-w-3xl mx-auto px-6 py-16">
+    <h1 class="text-4xl font-bold text-white mb-4">Contact</h1>
+    <p class="text-gray-400 text-lg mb-12 leading-relaxed">
+      Open to new opportunities in Python engineering, data infrastructure, and AI/ML systems.
+      The best way to reach me is through LinkedIn or GitHub.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+      <a
+        href="https://github.com/bryancourtneywhite"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-gray-900 border border-gray-800 hover:border-emerald-400 rounded-xl p-6 flex items-center gap-4 transition-all group"
+      >
+        <div class="text-3xl">🐙</div>
+        <div>
+          <p class="text-white font-semibold group-hover:text-emerald-400 transition-colors">GitHub</p>
+          <p class="text-gray-500 text-sm">@bryancourtneywhite</p>
+        </div>
+      </a>
+
+      <a
+        href="https://linkedin.com/in/bryancourtneywhite"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-gray-900 border border-gray-800 hover:border-emerald-400 rounded-xl p-6 flex items-center gap-4 transition-all group"
+      >
+        <div class="text-3xl">💼</div>
+        <div>
+          <p class="text-white font-semibold group-hover:text-emerald-400 transition-colors">LinkedIn</p>
+          <p class="text-gray-500 text-sm">bryancourtneywhite</p>
+        </div>
+      </a>
+
+      <a
+        href="mailto:bryancourtneywhite@gmail.com"
+        class="bg-gray-900 border border-gray-800 hover:border-emerald-400 rounded-xl p-6 flex items-center gap-4 transition-all group"
+      >
+        <div class="text-3xl">✉️</div>
+        <div>
+          <p class="text-white font-semibold group-hover:text-emerald-400 transition-colors">Email</p>
+          <p class="text-gray-500 text-sm">bryancourtneywhite@gmail.com</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+      <h2 class="text-white font-semibold text-lg mb-2">What I'm looking for</h2>
+      <p class="text-gray-400 leading-relaxed">
+        Roles in Python software engineering focused on the data and AI layer —
+        building pipelines, APIs, and intelligent systems. Particularly interested in
+        companies working at the intersection of data infrastructure and applied AI.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #030712;
+    color: #f9fafb;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+
+  ::selection {
+    background-color: #10b981;
+    color: #030712;
+  }
+}

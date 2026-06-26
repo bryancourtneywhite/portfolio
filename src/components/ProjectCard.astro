@@ -1,0 +1,70 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  tags: string[];
+  github: string;
+  demo?: string;
+  status: 'complete' | 'in-progress' | 'planned';
+  slug: string;
+}
+
+const { title, description, tags, github, demo, status, slug } = Astro.props;
+
+const statusStyles = {
+  complete: 'text-emerald-400 bg-emerald-400/10 border-emerald-400/20',
+  'in-progress': 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20',
+  planned: 'text-gray-500 bg-gray-800 border-gray-700',
+};
+
+const statusLabel = {
+  complete: 'Complete',
+  'in-progress': 'In Progress',
+  planned: 'Planned',
+};
+---
+
+<div class="bg-gray-900 border border-gray-800 rounded-xl p-6 flex flex-col gap-4 hover:border-gray-600 transition-all hover:translate-y-[-2px] group">
+  <div class="flex items-start justify-between gap-3">
+    <h3 class="text-white font-semibold text-lg group-hover:text-emerald-400 transition-colors">
+      {title}
+    </h3>
+    <span class={`text-xs px-2 py-1 rounded-full font-mono border whitespace-nowrap ${statusStyles[status]}`}>
+      {statusLabel[status]}
+    </span>
+  </div>
+  <p class="text-gray-400 text-sm leading-relaxed flex-1">{description}</p>
+  <div class="flex flex-wrap gap-2">
+    {tags.map((tag) => (
+      <span class="bg-gray-800 text-gray-400 text-xs px-2 py-1 rounded border border-gray-700">
+        {tag}
+      </span>
+    ))}
+  </div>
+  <div class="flex gap-4 pt-1 border-t border-gray-800">
+    <a
+      href={`/projects/${slug}`}
+      class="text-sm text-gray-400 hover:text-white transition-colors"
+    >
+      Read more →
+    </a>
+    <a
+      href={github}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-sm text-emerald-400 hover:text-emerald-300 transition-colors ml-auto"
+    >
+      GitHub ↗
+    </a>
+    {demo && (
+      <a
+        href={demo}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sm text-gray-400 hover:text-white transition-colors"
+      >
+        Demo ↗
+      </a>
+    )}
+  </div>
+</div>
