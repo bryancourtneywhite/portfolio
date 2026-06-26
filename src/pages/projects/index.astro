@@ -40,7 +40,7 @@ const categories = [
           github={project.data.github}
           demo={project.data.demo}
           status={project.data.status}
-          slug={project.slug}
+          slug={project.id.replace(/\.md$/, '')}
         />
       ))}
     </div>

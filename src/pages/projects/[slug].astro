@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getCollection, type CollectionEntry } from 'astro:content';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
   return projects.map((project) => ({
-    params: { slug: project.slug },
+    params: { slug: project.id.replace(/\.md$/, '') },
     props: { project },
   }));
 }
@@ -15,7 +15,7 @@ interface Props {
 }
 
 const { project } = Astro.props;
-const { Content } = await project.render();
+const { Content } = await render(project);
 
 const statusStyles = {
   complete: 'text-emerald-400 bg-emerald-400/10 border-emerald-400/20',
