@@ -6,7 +6,7 @@ category: "data"
 github: "https://github.com/bryancourtneywhite/data-pipeline-cli"
 featured: true
 order: 1
-status: "in-progress"
+status: "complete"
 ---
 
 ## Overview
@@ -21,7 +21,9 @@ Raw data from external sources is messy — wrong types, missing values, inconsi
 
 Built as a modular CLI tool with three clear layers: Extractor (reads CSV/JSON/API), Transformer (validates schema, cleans with pandas), and Loader (writes to DB via SQLAlchemy). Config-driven via YAML so it works on any dataset without code changes.
 
-## Tech Stack
+## Results
+
+Ingested 168 rows of real-time hourly weather data (7 days × 24 hours) from the Open-Meteo API for Phoenix, AZ — including temperature, precipitation, and wind speed. Pipeline handles schema validation, null dropping, duplicate removal, and batched DB writes. Ran against both CSV and live API sources with zero code changes, only config.
 
 - **Python 3.12** — core language
 - **pandas** — data transformation and cleaning
