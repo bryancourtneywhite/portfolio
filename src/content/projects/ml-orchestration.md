@@ -5,7 +5,7 @@ tags: ["Python", "Prefect", "scikit-learn", "MLflow", "PostgreSQL", "MLOps"]
 category: "ml"
 github: "https://github.com/bryancourtneywhite/ml-orchestration-pipeline"
 featured: false
-order: 5
+order: 6
 status: "planned"
 ---
 

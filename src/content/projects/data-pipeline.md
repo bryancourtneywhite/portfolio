@@ -5,7 +5,7 @@ tags: ["Python", "pandas", "SQLAlchemy", "Typer", "SQLite", "pytest"]
 category: "data"
 github: "https://github.com/bryancourtneywhite/data-pipeline-cli"
 featured: true
-order: 1
+order: 2
 status: "complete"
 ---
 

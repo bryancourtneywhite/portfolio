@@ -5,7 +5,7 @@ tags: ["Python", "FastAPI", "SQLAlchemy", "Pydantic", "Docker", "REST API"]
 category: "app"
 github: "https://github.com/bryancourtneywhite/data-api-service"
 featured: true
-order: 2
+order: 3
 status: "planned"
 ---
 

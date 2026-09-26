@@ -5,7 +5,7 @@ tags: ["Python", "LangGraph", "LangChain", "OpenAI", "SQLite", "Streamlit"]
 category: "agents"
 github: "https://github.com/bryancourtneywhite/agentic-data-analyst"
 featured: true
-order: 4
+order: 5
 status: "planned"
 ---
 

@@ -5,7 +5,7 @@ tags: ["Python", "scikit-learn", "MLflow", "FastAPI", "pandas", "XGBoost"]
 category: "ml"
 github: "https://github.com/bryancourtneywhite/ml-pipeline"
 featured: true
-order: 3
+order: 4
 status: "planned"
 ---
 

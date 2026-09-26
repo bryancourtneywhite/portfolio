@@ -5,7 +5,7 @@ tags: ["Python", "LangGraph", "CrewAI", "RAG", "OpenAI", "Streamlit", "Chroma"]
 category: "agents"
 github: "https://github.com/bryancourtneywhite/multi-agent-research-system"
 featured: true
-order: 6
+order: 7
 status: "planned"
 ---
 
